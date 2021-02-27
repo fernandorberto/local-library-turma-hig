@@ -9,7 +9,7 @@ env:
   VAR_NAME: arquivo
   
 jobs:
-  build:
+    job1:
     runs-on: ubuntu-latest
       
     steps:

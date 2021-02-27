@@ -8,21 +8,21 @@ jobs:
     name: job1
     runs-on: ubuntu-latest
     steps:
-      - name: etapa 1
+      - name: etapa 1 job1
         run: date
         
   job2:
     name: job2
     runs-on: windows-latest
     steps:
-      - name: etapa 2
+      - name: etapa 1 job2
         run: date
         
   job3:
     name: job3
     runs-on: macos-latest
     steps:
-      - name: etapa 3
+      - name: etapa 1 job3
         run: date
   
   job4:
@@ -30,6 +30,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: [job1, job2 ,job3]
     steps:
-      - name: etapa 4
+      - name: etapa 2 job4
         run: date
         

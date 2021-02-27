@@ -1,0 +1,35 @@
+on:
+  push:
+    branches:
+      - main
+      
+jobs:
+  job1:
+    name: job1
+    runs-on: ubuntu-latest
+    steps:
+      - name: etapa 1
+        run: date
+        
+  job2:
+    name: job2
+    runs-on: windows-latest
+    steps:
+      - name: etapa 2
+        run: date
+        
+  job3:
+    name: job3
+    runs-on: macos-latest
+    steps:
+      - name: etapa 3
+        run: date
+  
+  job4:
+    name: job4
+    runs-on: macos-latest
+    needs: [job1, job2 ,job3]
+    steps:
+      - name: etapa 4
+        run: date
+        

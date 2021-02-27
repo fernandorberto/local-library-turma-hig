@@ -1,0 +1,23 @@
+name: test2
+
+on:
+  push:
+    branches:
+      - main
+    
+env:
+  VAR_NAME: arquivo
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+      
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2.2.2
+      with:
+        name: ${{env.VAR_NAME}}
+        path: .
+        if-no-files-found: warn

@@ -59,7 +59,7 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_CSS: true
-          VALIDATE_MARKDOWN: false
+          VALIDATE_MARKDOWN: true
           JAVASCRIPT_DEFAULT_STYLE: prettier
 
 #-------------------------------------------------------------------------------#

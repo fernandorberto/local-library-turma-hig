@@ -111,8 +111,8 @@ jobs:
       
       - name: Set env variables
         run: |
-          heroku config:set NODE_ENV='mongodb+srv://dba:s2OuCobCglTtech6@cluster0.uiv1l.mongodb.net/local_library_dev?retryWrites=true'
-          heroku config:set MONGODB_URI=<string_de_conexao_do_banco> npm run devstart
+
+          heroku config:set MONGODB_URI=${{secrets.BD_KEY}}
       
       - name: Push code to Heroku
         run: git push heroku main
@@ -149,8 +149,8 @@ jobs:
       
       - name: Set env variables
         run: |
-          heroku config:set NODE_ENV=mongodb+srv://dba:s2OuCobCglTtech6@cluster0.uiv1l.mongodb.net/local_library?retryWrites=true
-          heroku config:set MONGODB_URI=<string_de_conexao_do_banco> npm run start
+          heroku config:set NODE_ENV=production
+          heroku config:set MONGODB_URI=${{secrets.BD_KEY}}
       
       - name: Push code to Heroku
         run: git push heroku main

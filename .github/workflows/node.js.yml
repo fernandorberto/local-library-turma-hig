@@ -102,12 +102,12 @@ jobs:
         uses: akhileshns/heroku-deploy@v3.10.9 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: devopslab-fernando-qa
+          heroku_app_name: projeto-final-qa
           heroku_email: fernandorberto@gmail.com
           justlogin: true
       
       - name: Set Heroku remote
-        run: heroku git:remote -a devopslab-fernando-qa
+        run: heroku git:remote -a projeto-final-qa
       
       - name: Set env variables
         run: |
